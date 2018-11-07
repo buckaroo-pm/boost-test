@@ -44,6 +44,8 @@ Boost.Test releases:
   and [link boost_test.usage_variants here]).
 * It is now possible to manually add a test case by specifying its name, with __BOOST_TEST_CASE_NAME__
 * Better logging of messages in `boost::exception`
+* [link boost_test.tests_organization.test_cases.test_case_generation.datasets.dataset_interface Custom datasets]
+  are not required to declare a inner type `sample` anymore
 
 [h5 Breaking changes]
 * Removed long time deprecated headers
