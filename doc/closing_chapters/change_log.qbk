@@ -46,6 +46,7 @@ Boost.Test releases:
 * Better logging of messages in `boost::exception`
 
 [h5 Breaking changes]
+* Removed long time deprecated headers
 
 [h5 Bugfixes and feature requests]
 
