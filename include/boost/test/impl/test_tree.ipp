@@ -532,49 +532,28 @@ auto_test_unit_registrar::auto_test_unit_registrar( int )
 // **************                global_fixture                ************** //
 // ************************************************************************** //
 
-global_fixture::global_fixture(): registered(false)
+global_fixture::global_fixture()
 {
     framework::register_global_fixture( *this );
-    registered = true;
-}
-
-void global_fixture::unregister_from_framework() {
-    // not accessing the framework singleton after deregistering -> release
-    // of the observer from the framework
-    if(registered) {
-        framework::deregister_global_fixture( *this );
-    }
-    registered = false;
 }
 
 global_fixture::~global_fixture()
 {
-    this->unregister_from_framework();
+    framework::deregister_global_fixture( *this );
 }
 
 // ************************************************************************** //
 // **************            global_configuration              ************** //
 // ************************************************************************** //
 
-global_configuration::global_configuration(): registered(false)
+global_configuration::global_configuration()
 {
     framework::register_observer( *this );
-    registered = true;
-}
-
-void global_configuration::unregister_from_framework()
-{
-    // not accessing the framework singleton after deregistering -> release
-    // of the observer from the framework
-    if(registered) {
-        framework::deregister_observer( *this );
-    }
-    registered = false;
 }
 
 global_configuration::~global_configuration()
 {
-    this->unregister_from_framework();
+    framework::deregister_observer( *this );
 }
 
 //____________________________________________________________________________//
