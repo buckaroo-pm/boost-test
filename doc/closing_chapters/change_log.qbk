@@ -30,6 +30,8 @@ Boost.Test releases:
 
 [h5 Bugfixes and feature requests]
 
+# [github_issue 180] Unreachable code warning on MSVC builds in test matrix
+
 # [pull_request 171] Correct library name in test runner help screen
 # [pull_request 182] fix use of `bind1st` in `example 12`
 # [pull_request 183] remove superfluous semicolon in `example 04`
