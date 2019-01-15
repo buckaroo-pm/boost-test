@@ -5,20 +5,15 @@
 
 //  See http://www.boost.org/libs/test for the library home page.
 
-#if defined(BOOST_MSVC) && (BOOST_MSVC > 1900)
-// VS2017+ compiler optimizations may cause this code NOT to crash.
-#pragma optimize("", off)
-
+// compiler optimizations may cause this code NOT to crash.
+#if defined(_MSC_VER)
+  #pragma optimize("", off)
+  #define DISABLE_OPTIMIZATIONS
 #elif defined(__clang__)
-#pragma clang push_options
-#pragma clang optimize ("O0")
-
+  #define DISABLE_OPTIMIZATIONS __attribute__ ((optnone))
 #elif defined(__GNUC__)
-#pragma GCC push_options
-#pragma GCC optimize ("O0")
-
+  #define DISABLE_OPTIMIZATIONS __attribute__ ((optnone))
 #endif
-
 
 //[example_code
 #define BOOST_TEST_MODULE example
@@ -26,6 +21,7 @@
 
 // optimizations should be disabled to properl
 // run this dummy code
+DISABLE_OPTIMIZATIONS
 void foo( int ) {}
 
 BOOST_AUTO_TEST_CASE( test_case )
@@ -45,8 +41,4 @@ BOOST_AUTO_TEST_CASE( test_case )
 
 #if defined(BOOST_MSVC) && (BOOST_MSVC > 1900)
 #pragma optimize("", on)
-#elif defined(__clang__)
-#pragma clang pop_options
-#elif defined(__GNUC__)
-#pragma GCC pop_options
 #endif
