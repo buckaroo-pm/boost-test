@@ -5,6 +5,21 @@
 
 //  See http://www.boost.org/libs/test for the library home page.
 
+#if defined(BOOST_MSVC) && (BOOST_MSVC > 1900)
+// VS2017+ compiler optimizations may cause this code NOT to crash.
+#pragma optimize("", off)
+
+#elif defined(__clang__)
+#pragma clang push_options
+#pragma clang optimize ("O0")
+
+#elif defined(__GNUC__)
+#pragma GCC push_options
+#pragma GCC optimize ("O0")
+
+#endif
+
+
 //[example_code
 #define BOOST_TEST_MODULE example
 #include <boost/test/included/unit_test.hpp>
@@ -23,17 +38,16 @@ void goo( int )
 {
 }
 
-#if defined(BOOST_MSVC) && (BOOST_MSVC > 1900)
-// VS2017+ compiler optimizations may cause this code NOT to crash.
-#pragma optimize("", off)
-#endif
-
 void foo( int i )
 {
     goo( 2/(i-1) );
 }
+//]
 
 #if defined(BOOST_MSVC) && (BOOST_MSVC > 1900)
 #pragma optimize("", on)
+#elif defined(__clang__)
+#pragma clang pop_options
+#elif defined(__GNUC__)
+#pragma GCC pop_options
 #endif
-//]
