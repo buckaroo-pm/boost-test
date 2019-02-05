@@ -1,0 +1,41 @@
+targets = [ "//:test" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-algorithm"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-detail"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-function"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-iterator"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-mpl"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-numeric_conversion"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-preprocessor"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-smart_ptr"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-timer"
+version = "1.55.0"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-type_index"
+version = "1.55.0"
