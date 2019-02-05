@@ -25,3 +25,13 @@ doc/html/*.html
 doc/examples/build
 doc/doxygen
 build/tmp
+Master_Test_Suite*.xml
+smoke-ts-sink.*
+smoke-ts-sink-new-style.*
+
+.buckd
+buck-out
+.buckconfig.local
+.buckconfig.d
+buckaroo
+buckaroo_macros.bzl
