@@ -1,4 +1,4 @@
-manifest = "7fbefe5fd990cc442122e73ab8a6a6bce980cfd07851b24d7a7ceba62206a8ee"
+manifest = "83d979b2520acd7f13fe3b119020abf32e98ac362e677ff033c9cd6bc449d9bf"
 
 [[dependency]]
 package = "github.com/buckaroo-pm/boost-algorithm"
@@ -122,7 +122,7 @@ revision = "a1873af9c1d31fb8ec2a87482b6bb9729439b4ac"
 
 [lock."github.com/buckaroo-pm/boost-numeric_conversion"]
 versions = [ "branch=master" ]
-revision = "35fa920e0b53c124b0b5972b1802032933c71fca"
+revision = "f091bb16ac40cebcf1ac69bbe39f9452b1232b9c"
 
 [lock."github.com/buckaroo-pm/boost-optional"]
 versions = [ "branch=master" ]
@@ -162,7 +162,7 @@ revision = "fdc2df7f811436674a1c55c766b8830a8cd02e96"
 
 [lock."github.com/buckaroo-pm/boost-system"]
 versions = [ "branch=master" ]
-revision = "623a2c80a8448da0df4e7f20102e9e929e355551"
+revision = "7730c1c9ba6e809ab7e21c9115d362d5a717b112"
 
 [lock."github.com/buckaroo-pm/boost-throw_exception"]
 versions = [ "branch=master" ]
@@ -202,4 +202,4 @@ revision = "44002f228a0b91c556cd41f8ceb5b4bff7745166"
 
 [lock."github.com/buckaroo-pm/icu4c"]
 versions = [ "branch=master" ]
-revision = "2bfbe715e2c1cd41e301b6a67fd50ae54273a504"
+revision = "7dfc9d72ec1fd0a47d0ef4f8e7756c797ad26f53"
